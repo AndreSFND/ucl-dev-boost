@@ -5,7 +5,7 @@ function Header(){
 
   return (
 
-    <header class="bg-red-500 h-screen w-screen">
+    <header class="bg-blue-300 h-screen w-screen">
 			<div class="flex flex-col justify-center w-2/3 h-full mx-auto text-center">
         <div class="flex flex-row justify-center w-full">
           <img src={logo} alt="Logo"/>
