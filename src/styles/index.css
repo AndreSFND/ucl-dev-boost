@@ -3709,6 +3709,14 @@ video {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-montserrat {
+  font-family: Montserrat, sans-serif;
+}
+
+.font-merriweather {
+  font-family: Merriweather, serif;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -14620,6 +14628,14 @@ video {
 
   .sm\:font-mono {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .sm\:font-montserrat {
+    font-family: Montserrat, sans-serif;
+  }
+
+  .sm\:font-merriweather {
+    font-family: Merriweather, serif;
   }
 
   .sm\:font-hairline {
@@ -25536,6 +25552,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-montserrat {
+    font-family: Montserrat, sans-serif;
+  }
+
+  .md\:font-merriweather {
+    font-family: Merriweather, serif;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -36450,6 +36474,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-montserrat {
+    font-family: Montserrat, sans-serif;
+  }
+
+  .lg\:font-merriweather {
+    font-family: Merriweather, serif;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -47362,6 +47394,14 @@ video {
 
   .xl\:font-mono {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .xl\:font-montserrat {
+    font-family: Montserrat, sans-serif;
+  }
+
+  .xl\:font-merriweather {
+    font-family: Merriweather, serif;
   }
 
   .xl\:font-hairline {
