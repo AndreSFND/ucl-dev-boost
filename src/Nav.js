@@ -3,7 +3,6 @@ import React from 'react';
 function Nav(){
 
   return (
-
     <nav class="fixed bg-ucl h-24 w-screen shadow">
         <div class="flex flex-row w-full h-full border">
 

@@ -5,13 +5,13 @@ function Header(){
 
   return (
 
-    <header class="bg-blue-300 h-screen w-screen">
-			<div class="flex flex-col justify-center w-2/3 h-full mx-auto text-center">
-        <div class="flex flex-row justify-center w-full">
+    <header className="h-screen w-screen bg-ucl">
+			<div className="flex flex-col justify-center w-1/6 h-full mx-auto my-auto text-center">
+        <div className="flex flex-row justify-center p-10 rounded-full border border-gray-300 bg-white shadow-lg">
           <img src={logo} alt="Logo"/>
         </div>
-        <p class="text-3xl">UCL Sanca</p>
-        <p class="text-base">balbalbalba</p>
+        <p className="text-3xl">UCL Sanca</p>
+        <p className="text-base">balbalbalba</p>
 			</div>
 		</header>
 
