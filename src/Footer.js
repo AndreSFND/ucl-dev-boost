@@ -4,7 +4,7 @@ function Footer(){
 
   return (
 
-    <footer className="bg-blue-500 h-screen w-screen">
+    <footer id="footer" className="bg-gray-800 h-64 w-screen">
 		</footer>
 
   );
