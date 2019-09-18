@@ -4,7 +4,7 @@ function Nav(){
 
   return (
 
-    <nav class="fixed bg-ucl h-24 w-screen">
+    <nav className="fixed bg-ucl h-24 w-screen border-b border-white shadow-md">
     </nav>
 
   );
