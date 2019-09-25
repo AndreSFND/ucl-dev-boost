@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from './Header.js';
 import Main from './Main.js';
+import Footer from './../../components/Footer/Footer.js'
 
 function Inicio(){
 
@@ -10,6 +11,7 @@ function Inicio(){
     <div>
         <Header />
         <Main />
+        <Footer />
     </div>
 
   );
