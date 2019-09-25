@@ -4,7 +4,7 @@ function Main(){
 
   return (
 
-    <main className="bg-gray-100 w-screen h-auto">
+    <main className="bg-gray-100 w-screen h-auto" id="main">
 
       <div className="flex flex-col justify-center w-full h-full text-center">
       
@@ -64,7 +64,7 @@ function SubPainelTop(props){
 
     return (
 
-    <div className="flex flex-row shadow-lg border border-gray-300 rounded-lg h-auto w-auto mx-2 my-4 p-2">
+    <div className="flex flex-row shadow-md border border-gray-300 rounded-lg h-auto w-auto mx-2 my-4 p-2">
         <div>
             <img className="w-40" src={require('./../../res/img/place.png')} alt="Puppy"/>
         </div>

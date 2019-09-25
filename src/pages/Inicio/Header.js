@@ -13,7 +13,7 @@ function Header(){
         <p className="text-4xl font-merriweather font-semibold text-white">Dev.academy()</p>
         <p className="text-xl text-white font-montserrat">Dev.academy() é uma plataforma de ensino do <a class="underline" href="http://uclsanca.icmc.usp.br/" target="blank">USPCodeLab</a> que armazena vídeos e aulas do grupo. </p>
 			
-        <a href="#footer">
+        <a href="#main">
           <button class="border-2 border-white bg-white text-ucl w-64 py-3 px-5 mx-auto my-10 font-semibold rounded font-montserrat text-xl">
             Ver mais
           </button>
