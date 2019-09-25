@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Nav from './Nav.js';
-import Header from './Header.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
-import Login from './Login.js';
+import Nav from './components/Navbar/Nav.js';
+import Footer from './components/Footer/Footer.js';
+
+import Inicio from './pages/Inicio/Inicio.js';
+import Login from './pages/Login/Login.js';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
     <div>
 
       <Nav />
-      <Login />
+      <Inicio />
       <Footer />
 
     </div>

@@ -10,6 +10,7 @@
     "tailwindcss": "^1.1.2"
   },
   "scripts": {
+    "tailwind": "npx tailwind build src/styles/tailwind.css -o src/styles/index.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

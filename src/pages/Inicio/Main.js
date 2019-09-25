@@ -66,7 +66,7 @@ function SubPainelTop(props){
 
     <div className="flex flex-row shadow-lg border border-gray-300 rounded-lg h-auto w-auto mx-2 my-4 p-2">
         <div>
-            <img className="w-40" src={require('./res/img/place.png')} alt="Puppy"/>
+            <img className="w-40" src={require('./../../res/img/place.png')} alt="Puppy"/>
         </div>
         <div className="flex flex-col align-top items-stretch w-full ml-6">
             <h1 className="text-2xl font-medium mb-2 border-b border-gray-300">
@@ -104,7 +104,7 @@ function SubPainelOutros(){
   return (
 
     <div className="max-w-sm shadow-lg h-36 mx-8">
-      <img className="w-full" src={require('./res/img/place2.png')} alt="Puppy" />
+      <img className="w-full" src={require('./../../res/img/place2.png')} alt="Puppy" />
     </div>
 
   );
