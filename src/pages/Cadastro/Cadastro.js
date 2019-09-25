@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './../../res/img/logo.png';
 
-function Login(){
+function Cadastro(){
 
   return (
 
@@ -16,7 +16,7 @@ function Login(){
             <h1 class="text-4xl mt-8 font-merriweather font-semibold text-white">Dev.academy()</h1>
           </div>
           <div class="bg-white h-full w-4/6 p-8">
-            <h1 class="text-4xl font-merriweather font-semibold text-gray-800 ">Entrar</h1>
+            <h1 class="text-4xl font-merriweather font-semibold text-gray-800 ">Cadastro</h1>
 
             <form class="w-full max-w-xl">
 
@@ -27,12 +27,16 @@ function Login(){
                 </div>
 
                 <div class="flex items-center border-b border-b-2 border-teal-500 py-2 m-4 mt-8">
-                  <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-montserrat" type="password" placeholder="*****" aria-label="Senha" />
+                  <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-montserrat" type="password" placeholder="Senha" aria-label="Senha" />
+                </div>
+
+                <div class="flex items-center border-b border-b-2 border-teal-500 py-2 m-4 mt-8">
+                  <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-montserrat" type="password" placeholder="Repetir senha" aria-label="Senha" />
                 </div>
 
                 <div class="flex justify-end">
                   <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-base font-semibold font-montserrat border-4 text-white py-1 px-2 rounded w-48 m-4 mt-8" type="button">
-                    Entrar
+                    Cadastrar
                   </button>
                 </div>
 
@@ -50,4 +54,4 @@ function Login(){
 
 }
 
-export default Login;
+export default Cadastro;
