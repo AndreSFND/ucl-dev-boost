@@ -4,7 +4,7 @@ function Main(){
 
   return (
 
-    <main className="bg-gray-100 w-screen h-auto" id="main">
+    <main className="bg-gray-100 w-screen h-auto pt-20" id="main">
 
       <div className="flex flex-col justify-center w-full h-full text-center">
       
