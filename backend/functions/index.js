@@ -6,7 +6,7 @@ const bp        = require('body-parser');
 const app       = express();
 
 app.use(cors());
-app.use(bp.json());
+app.use(express.json());
 
 admin.initializeApp({
     credential: admin.credential.cert("./firebase-keys.json"),
@@ -16,52 +16,81 @@ admin.initializeApp({
 const database = admin.database();
 const ref = database.ref("/ola");
 
-app.get('/', function (req, res) {
-
-    // const videoId = req.headers.videoId;
-    // database.ref("/videos/" + videoId).once("value", snapshot => {
-    //     res.status(200).send(snapshot.val());
-    // });
-
-    //Salvar dado
-    //database.ref("/users").set({name: "eu"});
-
-    //Adiciona dado com id
-    //database.ref("/users").push({ name: "andre" });
-
-    //Substitui dado (precisa ser objeto)
-    //database.ref("/users").update({ name: "eu" });
-
-    //Leitura
-    // database.ref("/users").once("value").then( (snapshot) => {
-    //     let data = snapshot.val();
-    //     console.log(data);
-    // });
-
-    //Apaga dado
-    // database.ref("/users").remove();
-
-    res.send("top");
-
+app.post('/user', async function (req, res) {
+    const snapshot = await database.ref('/user').once('value')
+    const allUsers = snapshot.val()
+    if(allUsers) {
+        const doesUserAlreadyExists = allUsers.find(user => user.email === req.body.email)
+        if(doesUserAlreadyExists) return res.status(400).send('DEU RUIM; usuario ja existe')
+    }
+    // const body = JSON.parse(req.body)
+    
+    await database.ref("/user").push({email: req.body.email, password: req.body.password});
+    res.status(200).send({message: 'deu certo', success: true});
 });
 
-app.post('/', function (req, res) {
+app.get('/user/:id', function (req, res) {
 
-    const url = JSON.parse(req.body).videoURL;
-    if(url === undefined) res.status(400).send("Must send and URL");
-    database.ref("/videos").push(url).then((videoRef)=>{
-        res.status(200).send(videoRef.key);
+    const id = req.params.id
+    database.ref("/user/"+id).once("value").then( (snapshot) => {
+        let data = snapshot.val();
+        console.log(data);
+        res.status(200).send(data);
     });
-    // res.send(`<iframe width="560" height="315" src="${url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
 
 });
 
-app.put('/', function (req, res) {
-    res.send('Got a PUT request');
+app.delete('/user/:id', function (req, res) {
+
+    database.ref("/user/"+req.params.id).remove();
+    res.status(200).send({message: 'deu certo', success: true});
+
 });
 
-app.delete('/', function (req, res) {
-    res.send('Got a DELETE request');
+// app.patch('/user', function (req, res) {
+
+//     database.ref("/user/-Lu9POk-UWILzOxAgko2").update({email: 'andre_sfnd@usp.br', password: '12345'});
+
+// });
+
+app.post('/video', function (req, res) {
+
+    database.ref("/video").push({url: req.body.url, titulo: req.body.titulo, descricao: req.body.descricao, userid: req.body.userid});
+    res.status(200).send({message: 'deu certo', success: true});
+
 });
+
+app.get('/video/:id', function (req, res) {
+
+    database.ref("/video/"+req.params.id).once("value").then( (snapshot) => {
+        let data = snapshot.val();
+        console.log(data);
+    });
+
+});
+
+app.delete('/video/:id', function (req, res) {
+
+    database.ref("/video/"+req.params.id).remove();
+    res.status(200).send({message: 'deu certo', success: true});
+
+});
+
+// app.patch('/video', function (req, res) {
+
+//     database.ref("/video/-Lu9MQEad5MkfEsDoE2j").update({url: "https://www.youtube.com/watch?v=z_aC5xPQ2f4", titulo: 'Ne-yo', descricao: 'Video do passarinho', userid: 'hmm'});
+
+// });
+
+// app.post('/', function (req, res) {
+
+//     const url = JSON.parse(req.body).videoURL;
+//     if(url === undefined) res.status(400).send("Must send and URL");
+//     database.ref("/videos").push(url).then((videoRef)=>{
+//         res.status(200).send(videoRef.key);
+//     });
+//     res.send(`<iframe width="560" height="315" src="${url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+
+// });
   
 exports.express = functions.https.onRequest(app);
